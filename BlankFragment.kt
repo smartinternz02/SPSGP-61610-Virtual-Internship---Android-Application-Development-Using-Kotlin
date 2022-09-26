@@ -1,4 +1,4 @@
-package com.example.kanchanadvancecalculator
+package com.example.checkboxandtoast
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
