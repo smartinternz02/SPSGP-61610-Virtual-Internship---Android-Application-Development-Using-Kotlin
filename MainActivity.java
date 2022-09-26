@@ -1,83 +1,59 @@
-package com.example.checkboxandtoast;
+package com.example.currencyconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.util.SparseBooleanArray;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckedTextView;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TAG="ListViewExample";
-
-    public ListView listView;
-    public Button selected;
+    Spinner sp1,sp2;
+    EditText entervalue;
+    TextView convertedvalue;
+    Button convert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        this.listView=(ListView) findViewById(R.id.listView);
-        this.selected=(Button) findViewById(R.id.selected);
-        this.listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-        this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        sp1=(Spinner)findViewById(R.id.sp1);
+        sp2=(Spinner)findViewById(R.id.sp2);
+        entervalue=(EditText) findViewById(R.id.entervalue);
+        convertedvalue=(TextView) findViewById(R.id.convertedvalue);
+        convert=(Button) findViewById(R.id.convert);
 
-                Log.i(TAG,"onItemClick:"+position);
-                CheckedTextView v=(CheckedTextView) view;
-                boolean currentCheck=v.isChecked();
-                ItemsDetail items=(ItemsDetail) listView.getItemAtPosition(position);
-                items.setActive(!currentCheck);
-            }
-        });
-        //
-        this.selected.setOnClickListener(new View.OnClickListener() {
+        String[] from={"USD"};
+        ArrayAdapter ad =new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,from);
+        sp1.setAdapter(ad);
+
+        String[] to={"Saudi Riyal","Indian Rupees"};
+        ArrayAdapter ad1=new ArrayAdapter<String>(this, androidx.constraintlayout.widget.R.layout.support_simple_spinner_dropdown_item,to);
+        sp2.setAdapter(ad1);
+
+        convert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                printSelectedItems();
+                Double tot;
+
+                Double amt=Double.parseDouble(entervalue.getText().toString());
+
+                if (sp1.getSelectedItem().toString()=="USD"&& sp2.getSelectedItem().toString()=="Indian Rupees")
+                {
+                    tot=amt*70.0;
+                    convertedvalue.setText(""+tot);
+                }
+                else if (sp1.getSelectedItem().toString()=="USD"&& sp2.getSelectedItem().toString()=="Saudi Riyal")
+                {
+                    tot=amt*3.75;
+                    convertedvalue.setText(""+tot);
+                }
             }
         });
-        this.intiListViewData();
-    }
-    private void intiListViewData(){
-        ItemsDetail apple=new ItemsDetail("Apple","Fruit");
-        ItemsDetail milk=new ItemsDetail("Milk","Dairy product");
-        ItemsDetail pizza=new ItemsDetail("pizza","fast food");
-
-        ItemsDetail[] items = new ItemsDetail[]{apple,milk,pizza};
-
-        ArrayAdapter<ItemsDetail>arrayAdapter=new ArrayAdapter<ItemsDetail>(this, android.R.layout.simple_list_item_checked,items);
-
-        this.listView.setAdapter(arrayAdapter);
-
-        for (int i=0;i< items.length;i++) {
-            this.listView.setItemChecked(i,items[i].isActive());
-        }
-    }
-    public void printSelectedItems(){
-
-        SparseBooleanArray sp =listView.getCheckedItemPositions();
-        StringBuilder sb =new StringBuilder();
-
-        for (int i=0;i<sp.size();i++)
-        {
-            if (sp.valueAt(i)==true) {
-                ItemsDetail items = (ItemsDetail) listView.getItemAtPosition(i);
-
-                String s= items.getItemName();
-                sb =sb.append(""+s);
-            }
-    }
-        Toast.makeText(this,"Selected Items are::"+sb.toString(),Toast.LENGTH_LONG).show();
     }
 }
