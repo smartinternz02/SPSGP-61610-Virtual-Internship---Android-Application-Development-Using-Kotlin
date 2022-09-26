@@ -1,87 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-
-    android:background="@drawable/girlandboy">
+    android:background="@drawable/backgrounquiz">
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="247dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="464dp"
+        android:background="#A7A8AA"
+        android:text="SIGN UP"
+        android:textColor="#021278"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/kan"
+        android:id="@+id/text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="345dp"
-        android:background="#4A5EDF"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Kanchan giri"
-        android:textColor="#0B0A0A"
+        android:text="TO THE WORLD OF QUIZ"
+        android:textColor="#F8FAFB"
         android:textSize="20sp"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="198dp"
-        android:layout_height="112dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="465dp"
-        android:background="#DCE153"
-        android:paddingLeft="20dp">
-
-        <RadioButton
-            android:id="@+id/radioMale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@android:drawable/btn_radio"
-            android:padding="10dp"
-            android:text="Male"
-            android:textColor="#BD1E5D"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/radioFemale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@android:drawable/btn_radio"
-            android:padding="10dp"
-            android:text="Female"
-            android:textColor="#DA4545"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </RadioGroup>
+        app:layout_constraintVertical_bias="0.328" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="158dp"
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="427dp"
-        android:layout_marginEnd="192dp"
-        android:layout_marginBottom="269dp"
-        android:background="#B6DF92"
-        android:text="YOUR GENDER?"
-        android:textColor="#8E4832"
+        android:text="WELCOME"
+        android:textColor="#F6F6F6"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KANCHANGIRI_07576"
+        android:textColor="#08103E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="246dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="376dp"
+        android:background="#A0A0A1"
+        android:text="LOGIN"
+        android:textColor="#313233"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:iconTint="#343B42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
