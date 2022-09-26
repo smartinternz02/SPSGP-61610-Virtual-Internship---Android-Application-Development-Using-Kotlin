@@ -1,4 +1,4 @@
-package com.example.checkboxandtoast
+package com.example.radiobuttonkanchan
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,120 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animationCache="false"
-    android:foreground="#BCED92"
-    android:foregroundGravity="center"
-    android:foregroundTint="#C6EAA8"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    android:background="@drawable/girlandboy">
 
     <TextView
-        android:id="@+id/from"
-        android:layout_width="93dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="460dp"
-        android:gravity="right"
-        android:text="From"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/sp2"
-        android:layout_width="153dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="456dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.689"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/kan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="kanchan giri_BTCSE07576"
-        android:textAlignment="center"
-        android:textColor="#4659D3"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="345dp"
+        android:background="#4A5EDF"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Kanchan giri"
+        android:textColor="#0B0A0A"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.16" />
 
-    <EditText
-        android:id="@+id/entervalue"
-        android:layout_width="253dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="180dp"
-        android:ems="10"
-        android:hint="Enter your value "
-        android:inputType="textPersonName"
-        android:textColorHint="#2036C6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="198dp"
+        android:layout_height="112dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="465dp"
+        android:background="#DCE153"
+        android:paddingLeft="20dp">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/btn_radio"
+            android:padding="10dp"
+            android:text="Male"
+            android:textColor="#BD1E5D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/btn_radio"
+            android:padding="10dp"
+            android:text="Female"
+            android:textColor="#DA4545"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
 
     <TextView
-        android:id="@+id/convertedvalue"
-        android:layout_width="216dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="260dp"
-        android:hint="Converted value......"
-        android:textColorHint="#223BDD"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/convert"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="552dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/sp1"
-        android:layout_width="153dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="368dp"
-        android:foregroundTint="#EAB9CC"
-        android:spinnerMode="dropdown"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/to"
-        android:layout_width="93dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="372dp"
-        android:gravity="right"
-        android:text="To"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="427dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="269dp"
+        android:background="#B6DF92"
+        android:text="YOUR GENDER?"
+        android:textColor="#8E4832"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
