@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bq">
+
+    <EditText
+        android:id="@+id/signupusername"
+        android:layout_width="295dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="364dp"
+        android:hint="USERNAME"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#070707"
+        android:textColorHint="#AAA5A5"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signuppassword"
+        android:layout_width="301dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="452dp"
+        android:hint="PASSWORD"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#070707"
+        android:textColorHint="#AAA3A3"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signupemail"
+        android:layout_width="293dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="292dp"
+        android:hint="E-MAIL"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#070707"
+        android:textColorHint="#AAA4A4"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/signupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="568dp"
+        android:text="SIGNUP"
+        android:textStyle="bold"
+        app:iconTint="#C58888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textColor="#700931"
+        android:textColorHighlight="#C2185B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
